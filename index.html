@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios Módulos</title>
+  <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <style>
+    pre {
+      background: #f7f7f9;
+      border: 1px solid #e1e1e8;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body class="container">
+  <h1 class="text-center">Ejercicios de Módulos</h1>
+
+  <!-- Módulo 1: Grid System -->
+  <div class="card">
+    <h3>Módulo 1 - Grid System</h3>
+    <p>Bootstrap utiliza un sistema de 12 columnas para organizar el contenido responsivo. A continuación, ejemplos con diferentes tamaños (`xs`, `sm`, `md`, `lg`), combinaciones desbalanceadas, alineación vertical, así como clases útiles como `push`, `pull` y `hidden-*`.</p>
+
+
+    <pre>&lt;div class="row"&gt;
+    &lt;div class="col-xs-6 col-sm-4 col-md-3 col-lg-2"&gt;Responsive 1&lt;/div&gt;
+    &lt;div class="col-xs-6 col-sm-8 col-md-9 col-lg-10"&gt;Responsive 2&lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class="row"&gt;
+    &lt;div class="col-md-8"&gt;Columna ancha&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;Columna angosta&lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class="row" style="display:flex; align-items:center;"&gt;
+    &lt;div class="col-md-6"&gt;Alineado vertical&lt;/div&gt;
+    &lt;div class="col-md-6"&gt;Elemento al mismo nivel&lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class="row"&gt;
+    &lt;div class="col-md-4 col-md-push-4" style="background:#eee;"&gt;Empujado 4 columnas&lt;/div&gt;
+    &lt;div class="col-md-4 col-md-pull-4" style="background:#ddd;"&gt;Jalado 4 columnas&lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class="row"&gt;
+    &lt;div class="col-xs-12 hidden-sm hidden-md hidden-lg"&gt;Visible solo en XS&lt;/div&gt;
+    &lt;div class="col-sm-12 hidden-xs hidden-md hidden-lg"&gt;Visible solo en SM&lt;/div&gt;
+    &lt;div class="col-md-12 hidden-xs hidden-sm hidden-lg"&gt;Visible solo en MD&lt;/div&gt;
+    &lt;div class="col-lg-12 hidden-xs hidden-sm hidden-md"&gt;Visible solo en LG&lt;/div&gt;
+    &lt;/div&gt;</pre>
+
+
+    <button class="btn btn-primary" onclick="$('#grid-demo').toggle()">Ejecutar</button>
+    <div id="grid-demo" style="display:none; margin-top:10px">
+    <div class="row">
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 well">Responsive 1</div>
+    <div class="col-xs-6 col-sm-8 col-md-9 col-lg-10 well">Responsive 2</div>
+    </div>
+    <div class="row">
+    <div class="col-md-8 well">Columna ancha</div>
+    <div class="col-md-4 well">Columna angosta</div>
+    </div>
+    <div class="row" style="display:flex; align-items:center;">
+    <div class="col-md-6 well">Alineado vertical</div>
+</div>
+
+  <!-- Módulo 2: Botones y Formularios -->
+  <div class="card">
+    <h3>Información Extra - Tipos de Botones en Bootstrap 3</h3>
+    <p>Bootstrap 3 ofrece varias clases para estilos de botones:</p>
+    <ul>
+    <li><code>btn-default</code>: Botón neutro (gris).</li>
+    <li><code>btn-primary</code>: Botón principal (azul).</li>
+    <li><code>btn-success</code>: Éxito o confirmación (verde).</li>
+    <li><code>btn-info</code>: Información (celeste).</li>
+    <li><code>btn-warning</code>: Advertencia (naranja).</li>
+    <li><code>btn-danger</code>: Peligro o acción destructiva (rojo).</li>
+    <li><code>btn-link</code>: Estilo de enlace, sin fondo ni borde.</li>
+    </ul>
+    <p>También se pueden usar modificadores de tamaño:</p>
+    <ul>
+    <li><code>btn-lg</code>: Botón grande</li>
+    <li><code>btn-sm</code>: Botón pequeño</li>
+    <li><code>btn-xs</code>: Botón extra pequeño</li>
+    <li><code>btn-block</code>: Botón de ancho completo</li>
+    </ul>
+    <p>Ejemplos:</p>
+    <pre>&lt;button class="btn btn-default"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-link"&gt;Link&lt;/button&gt;
+
+&lt;button class="btn btn-primary btn-lg"&gt;Grande&lt;/button&gt;
+&lt;button class="btn btn-primary btn-sm"&gt;Pequeño&lt;/button&gt;
+&lt;button class="btn btn-primary btn-xs"&gt;Extra pequeño&lt;/button&gt;
+&lt;button class="btn btn-primary btn-block"&gt;Botón de bloque&lt;/button&gt;
+
+&lt;a href="#" class="btn btn-info"&gt;Botón como enlace&lt;/a&gt;
+&lt;div class="btn-group"&gt;
+  &lt;button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"&gt;
+    Opciones &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu" role="menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Acción&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Otra acción&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Algo más aquí&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+
+    <button class="btn btn-primary" onclick="$('#botones-demo').toggle()">Ejecutar</button>
+    <div id="botones-demo" style="display:none; margin-top:10px">
+      <button class="btn btn-default">Default</button>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-danger">Danger</button>
+      <button class="btn btn-link">Link</button>
+      <br><br>
+      <button class="btn btn-primary btn-lg">Grande</button>
+      <button class="btn btn-primary btn-sm">Pequeño</button>
+      <button class="btn btn-primary btn-xs">Extra pequeño</button>
+      <button class="btn btn-primary btn-block">Botón de bloque</button>
+      <br><br>
+      <a href="#" class="btn btn-info">Botón como enlace</a>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Opciones <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Acción</a></li>
+          <li><a href="#">Otra acción</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Algo más aquí</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Módulo 3: Tablas -->
+  <div class="card">
+    <h3>Módulo 3 - Tablas</h3>
+    <p>Las tablas de Bootstrap incluyen estilos como rayado, bordeado y hover. También puedes usar clases para encabezados.</p>
+    <pre>&lt;table class="table table-striped table-bordered table-hover"&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Edad&lt;/th&gt;&lt;th&gt;Correo&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;ana@mail.com&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Luis&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;luis@mail.com&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+    <button class="btn btn-primary" onclick="$('#tabla-demo').toggle()">Ejecutar</button>
+    <div id="tabla-demo" style="display:none; margin-top:10px">
+      <table class="table table-striped table-bordered table-hover">
+        <thead><tr><th>Nombre</th><th>Edad</th><th>Correo</th></tr></thead>
+        <tbody>
+          <tr><td>Ana</td><td>25</td><td>ana@mail.com</td></tr>
+          <tr><td>Luis</td><td>30</td><td>luis@mail.com</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Módulo 4: NavBar -->
+  <div class="card">
+    <h3>Módulo 4 - NavBar</h3>
+    <p>La barra de navegación (NavBar) de Bootstrap sirve para crear menús de navegación responsivos y organizados. Puedes incluir enlaces, dropdowns, formularios de búsqueda, logotipos y controles de usuario.</p>
+    <ul>
+    <li><strong>.navbar</strong>: Clase base del contenedor de navegación.</li>
+    <li><strong>.navbar-default</strong>: Estilo predeterminado (puede ser <code>.navbar-inverse</code> para fondo oscuro).</li>
+    <li><strong>.navbar-brand</strong>: Se usa para el logotipo o nombre del sitio.</li>
+    <li><strong>.nav</strong> + <strong>.navbar-nav</strong>: Contenedor para los elementos de navegación.</li>
+    <li><strong>.navbar-right</strong>: Alinea elementos a la derecha.</li>
+    <li><strong>.navbar-form</strong>: Para formularios de búsqueda u otros.</li>
+    <li><strong>.dropdown</strong>: Menús desplegables dentro del navbar.</li>
+    </ul>
+
+
+    <pre>&lt;nav class="navbar navbar-default"&gt;
+    &lt;div class="container-fluid"&gt;
+    &lt;div class="navbar-header"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Mi Sitio&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class="nav navbar-nav"&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Nosotros&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Servicios &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Web&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Móvil&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;form class="navbar-form navbar-right" role="search"&gt;
+    &lt;div class="form-group"&gt;
+    &lt;input type="text" class="form-control" placeholder="Buscar"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-default"&gt;Buscar&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;/nav&gt;</pre>
+
+
+    <button class="btn btn-primary" onclick="$('#navbar-demo').toggle()">Ejecutar</button>
+    <div id="navbar-demo" style="display:none; margin-top:10px">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="#">Mi Sitio</a>
+    </div>
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Inicio</a></li>
+    <li><a href="#">Nosotros</a></li>
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    Servicios <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+    <li><a href="#">Web</a></li>
+    <li><a href="#">Móvil</a></li>
+    </ul>
+    </li>
+    </ul>
+    <form class="navbar-form navbar-right" role="search">
+    <div class="form-group">
+    <input type="text" class="form-control" placeholder="Buscar">
+    </div>
+    <button type="submit" class="btn btn-default">Buscar</button>
+    </form>
+    </div>
+    </nav>
+    </div>
+</div>
+
+  <!-- Módulo 5: Modal -->
+  <div class="card">
+    <h3>Módulo 5 - Modal</h3>
+    <p>Un modal es una ventana emergente centrada que se puede usar para mostrar información o confirmar acciones.</p>
+    <pre>&lt;button class="btn btn-info" data-toggle="modal" data-target="#miModal"&gt;Abrir Modal&lt;/button&gt;
+&lt;div class="modal fade" id="miModal"&gt;...&lt;/div&gt;</pre>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#miModal">Ejecutar</button>
+  </div>
+
+  <!-- Modal real -->
+  <div class="modal fade" id="miModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Título del Modal</h4>
+        </div>
+        <div class="modal-body">
+          Este es el contenido del modal.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap-3.4.1-dist/js/jquery-3.7.1.min.js"></script>
+  <script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
